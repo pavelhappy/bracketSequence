@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class Main {
+    /**
+     * Тестовые данные для демонстрации работы метода
+     */
     public static void main(String[] args) throws Exception {
         String[] testArray = new String[4];
         testArray[0] = "{([))}";
@@ -14,7 +17,12 @@ public class Main {
         }
     }
 
-    private static boolean[] braces(String[] values) throws Exception {
+    /**
+     * Проверяем каждую строку массива на правильность закрытия скобок
+     * @param values массив строк со скобками
+     * @return массив значений true/false с результатами проверки строк
+     */
+    private static boolean[] braces(String[] values) {
         Stack<Character> stack = new Stack<Character>();
         boolean[] returnArray = new boolean[values.length];
         for (int i = 0; i < values.length; i++) {
